@@ -1,6 +1,6 @@
 # CheatSheet Central
 
-This repository contains cheat sheets for various programming languages.
+This repository contains cheat sheets for programming languages.
 
 ## Languages
 

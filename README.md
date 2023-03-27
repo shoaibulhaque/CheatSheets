@@ -6,8 +6,6 @@ This repository contains cheat sheets for various programming languages.
 
 - Python
 
-## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 

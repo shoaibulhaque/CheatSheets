@@ -1,8 +1,6 @@
 # C#
 
-Tags: CheatSheet
-
-# **C# Cheatsheet**
+# **C# Cheatsheet** ![C# Badge](https://img.shields.io/badge/language-C%23-brightgreen)
 
 ## **Data Types**
 

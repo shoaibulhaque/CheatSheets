@@ -12,7 +12,7 @@
 
 - [Python](https://github.com/shoaibulhaque/CheatSheets/blob/main/Python-CheatSheet.md)
 - [C#](https://github.com/shoaibulhaque/CheatSheets/blob/main/C%23-CheatsSheet.md)
-- [C++](https://github.com/exampleuser/CheatSheets/blob/main/C++-CheatSheet.md)
+- [C++](https://github.com/shoaibulhaque/CheatSheets/blob/main/C%2B%2B-Cheatsheet.md)
 
 
 

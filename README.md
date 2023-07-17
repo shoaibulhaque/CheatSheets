@@ -17,7 +17,7 @@
 
 ## License
 
-This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This repository is licensed under the MIT License - see the [LICENSE](https://github.com/shoaibulhaque/CheatSheets/blob/main/LICENSE.txt) file for details.
 
 
 

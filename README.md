@@ -13,8 +13,8 @@
 ## Languages
 
 - [Python](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/Python-CheatSheet.md)
-- [C#](https://github.com/shoaibulhaque/CheatSheets/blob/main/C%23-CheatsSheet.md)
-- [C++](https://github.com/shoaibulhaque/CheatSheets/blob/main/C%2B%2B-Cheatsheet.md)
+- [C#](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/C%23-CheatsSheet.md)
+- [C++](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/C%2B%2B-Cheatsheet.md)
 
 ## License
 

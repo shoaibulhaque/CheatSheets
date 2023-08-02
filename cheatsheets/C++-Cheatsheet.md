@@ -45,8 +45,7 @@ y = 20; // initialization after declaration
 
 ### Conditional Statements
 
-```
-c++Copy code
+```cpp
 if (x > y) {
     // do something
 } else if (x < y) {

@@ -534,3 +534,54 @@ document.addEventListener("click", function(event) {
   console.log("The target of the event is: " + event.target); // The target of the event is: [object HTMLDivElement]
 });
 ```
+#### 1. **Rest Parameter:**
+   - **Definition:** A rest parameter allows a function to accept an indefinite number of arguments as an array.
+   - **Syntax:** `function exampleFunction(...rest) { /* code */ }`
+   - **Example:**
+     ```javascript
+     function sum(...numbers) {
+         return numbers.reduce((total, num) => total + num, 0);
+     }
+
+     console.log(sum(1, 2, 3, 4)); // Output: 10
+     ```
+
+#### 2. **Spread Parameter:**
+   - **Definition:** Spread syntax allows an iterable (e.g., an array) to be expanded into individual elements.
+   - **Syntax:** `const newArray = [...existingArray];`
+   - **Example:**
+     ```javascript
+     const numbers = [1, 2, 3];
+     const newNumbers = [...numbers, 4, 5];
+
+     console.log(newNumbers); // Output: [1, 2, 3, 4, 5]
+     ```
+
+#### 3. **Arrow Functions:**
+   - **Definition:** Arrow functions provide a concise syntax for writing anonymous functions.
+   - **Syntax:** `(parameters) => expression`
+   - **Example:**
+     ```javascript
+     const square = (num) => num * num;
+
+     console.log(square(5)); // Output: 25
+     ```
+
+#### 4. **Callbacks:**
+   - **Definition:** A callback function is a function passed as an argument to another function, to be executed later.
+   - **Example:**
+     ```javascript
+     function fetchData(url, callback) {
+         // Simulating an asynchronous operation
+         setTimeout(() => {
+             const data = { result: 'some data' };
+             callback(data);
+         }, 1000);
+     }
+
+     function processResult(result) {
+         console.log(result);
+     }
+
+     fetchData('https://example.com/api', processResult);
+     ```

@@ -93,11 +93,19 @@ x *= 5; // Multiply x by 5 and assign the result to x (same as x = x * 5)
 x /= 5; // Divide x by 5 and assign the result to x (same as x = x / 5)
 x %= 5; // Get the remainder of x divided by 5 and assign the result to x (same as x = x % 5)
 
+// Reset after the assignment examples above, which leave x equal to 0.
+x = 10;
+y = 5;
+
 // Use comparison operators to compare values and return a boolean value
 x == y; // false (x is not equal to y)
-x === y; // false (x is not strictly equal to y, because they have different data types)
+x === y; // false (both are numbers, but their values differ)
 x != y; // true (x is not equal to y)
 x !== y; // true (x is not strictly equal to y)
+
+// Loose equality can coerce types; strict equality does not.
+10 == "10"; // true
+10 === "10"; // false
 x < y; // false (x is not less than y)
 x > y; // true (x is greater than y)
 x <= y; // false (x is not less than or equal to y)

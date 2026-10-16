@@ -171,12 +171,19 @@ u.FirstName = "John"
 ### Interfaces
 
 ```go
+package main
+
+import (
+  "fmt"
+  "math"
+)
+
 type Shape interface {
   Area() float64
 }
 
 type Circle struct {
-  x, y, radius float64
+  radius float64
 }
 
 func (c *Circle) Area() float64 {
@@ -187,9 +194,15 @@ func getArea(s Shape) float64 {
   return s.Area()
 }
 
-c := Circle{x: 0, y: 0, radius: 5}
-getArea(&c) 
+func main() {
+  circle := Circle{radius: 5}
+  fmt.Printf("%.2f\n", getArea(&circle)) // 78.54
+}
 ```
+
+`Area` has a pointer receiver, so `*Circle` implements `Shape`. Pass `&circle`
+when an interface value is required; `Circle` does not include that method in
+its method set.
 
 - Interface defines a set of methods signature
 - Types implement interfaces by implementing interface methods

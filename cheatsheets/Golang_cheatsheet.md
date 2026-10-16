@@ -268,17 +268,38 @@ channel; receivers should not close channels they do not own.
 
 ## Testing
 
+Create `add.go`:
+
 ```go
+package calculator
+
+func Add(x, y int) int {
+  return x + y
+}
+```
+
+Create `add_test.go` in the same directory:
+
+```go
+package calculator
+
+import "testing"
+
 func TestAdd(t *testing.T) {
-
-  expected := 10
-  actual := Add(5, 5)
-
-  if actual != expected {
-    t.Errorf("Expected %d but got %d", expected, actual) 
+  for _, test := range []struct{ x, y, want int }{
+    {5, 5, 10},
+    {-2, 3, 1},
+    {0, 0, 0},
+  } {
+    if got := Add(test.x, test.y); got != test.want {
+      t.Errorf("Add(%d, %d) = %d; want %d", test.x, test.y, got, test.want)
+    }
   }
 }
 ```
+
+In a new project directory, run `go mod init example.com/calculator` once, then
+run `go test ./...`.
 
 - Test files end with `_test.go`
 - Use `go test` to run tests 

@@ -122,18 +122,22 @@ with open("myfile.txt", "r", encoding="utf-8") as file:
 Opening a file with `"w"` truncates existing content. Use `"a"` to append instead.
 # Exception Handling
 ```python
-# Handling an exception
+# Catch the failure expected from this operation.
 try:
-    print(x)
-except NameError:
-    print("Variable x is not defined")
-except:
-    print("Something else went wrong")
+    age = int("not a number")
+except ValueError as error:
+    print(f"Invalid age: {error}")
 
-# Raising an exception
-x = -1
-if x < 0:
-    raise Exception("x cannot be negative")
+# Raise a specific exception for an invalid argument.
+def require_nonnegative(value):
+    if value < 0:
+        raise ValueError("value cannot be negative")
+    return value
+
+try:
+    require_nonnegative(-1)
+except ValueError as error:
+    print(error)  # value cannot be negative
 ```
 # Object-Oriented Programming
 ```python

@@ -188,7 +188,7 @@ import re
 
 # Matching a pattern
 txt = "The rain in Spain"
-x = re.search("^The.*Spain$", txt)
+x = re.search(r"^The.*Spain$", txt)
 
 if x:
     print("Match found")
@@ -197,7 +197,7 @@ else:
 
 # Replacing a string
 txt = "The rain in Spain"
-x = re.sub("\s", "-", txt)
+x = re.sub(r"\s", "-", txt)
 
 print(x)
 ```

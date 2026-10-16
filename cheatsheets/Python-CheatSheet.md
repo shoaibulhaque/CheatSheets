@@ -201,19 +201,18 @@ print(x)
 ```python
 import socket
 
-# Creating a socket object
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# A low-level HTTP demonstration; use an HTTP client for application code.
+request = (
+    b"GET / HTTP/1.1\r\n"
+    b"Host: example.com\r\n"
+    b"Connection: close\r\n\r\n"
+)
 
-# Connecting to a server
-s.connect(("www.google.com", 80))
-
-# Sending data
-s.send(b"GET / HTTP/1.1\r\n\r\n")
-
-# Receiving data
-response = s.recv(1024)
-
-print(response.decode("utf-8"))
+with socket.create_connection(("example.com", 80), timeout=5) as connection:
+    connection.sendall(request)
+    # recv returns at most this many bytes; this is only a response preview.
+    preview = connection.recv(1024)
+    print(preview.decode("utf-8", errors="replace"))
 ```
 # Multithreading
 ```python

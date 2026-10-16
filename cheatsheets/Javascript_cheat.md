@@ -365,7 +365,7 @@ JavaScript has many built-in methods and properties that can be used to perform 
 
 Some of the most commonly used built-in methods and properties are:
 
-- `String` methods and properties: operate on string values, such as `length`, `charAt`, `indexOf`, `lastIndexOf`, `slice`, `substring`, `toLowerCase`, `toUpperCase`, `trim`, `split`, `join`, `replace`, etc.
+- `String` methods and properties: operate on string values, such as `length`, `charAt`, `indexOf`, `lastIndexOf`, `slice`, `substring`, `toLowerCase`, `toUpperCase`, `trim`, `split`, `replace`, etc.
 - `Number` methods and properties: operate on number values, such as `toString`, `toFixed`, `toPrecision`, `parseInt`, `parseFloat`, `isNaN`, `isFinite`, etc.
 - `Math` methods and properties: perform mathematical operations and calculations, such as `PI`, `E`, `abs`, `round`, `floor`, `ceil`, `pow`, `sqrt`, `min`, `max`, `random`, etc.
 - `Date` methods and properties: manipulate date and time values, such as `now`, `parse`, `getDate`, `setDate`, `getDay`, `getMonth`, `setMonth`, `getFullYear`, `setFullYear`, etc.
@@ -386,7 +386,7 @@ name.toLowerCase(); // "john"
 name.toUpperCase(); // "JOHN"
 name.trim(); // "John"
 name.split(""); // ["J", "o", "h", "n"]
-name.join("-"); // "J-o-h-n"
+name.split("").join("-"); // "J-o-h-n" (join is an Array method)
 name.replace("o", "a"); // "Jahn"
 
 // Use Number methods and properties to operate on number values
@@ -396,7 +396,9 @@ x.toFixed(2); // "3.14"
 x.toPrecision(2); // "3.1"
 Number.parseInt("42"); // 42
 Number.parseFloat("3.14"); // 3.14
-Number.isNaN("NaN"); // true
+Number.isNaN("NaN"); // false (strings are not coerced)
+Number.isNaN(NaN); // true
+Number.isNaN(Number("not a number")); // true
 Number.isFinite("Infinity"); // false
 
 // Use Math methods and properties to perform mathematical operations and calculations

@@ -106,21 +106,20 @@ print(sqrt(25))
 from mypackage.math.operations import add
 print(add(2, 3))
 ```
-# File I/0
+# File I/O
+
+Use a context manager so each file is closed even if an operation raises an
+exception. Write the sample file first so it also works in a new folder.
+
 ```python
-# Opening a file
-f = open("myfile.txt", "r")
+with open("myfile.txt", "w", encoding="utf-8") as file:
+    file.write("Hello, World!")
 
-# Reading a file
-print(f.read())
-
-# Writing to a file
-f = open("myfile.txt", "w")
-f.write("Hello, World!")
-
-# Closing a file
-f.close()
+with open("myfile.txt", "r", encoding="utf-8") as file:
+    print(file.read())  # Hello, World!
 ```
+
+Opening a file with `"w"` truncates existing content. Use `"a"` to append instead.
 # Exception Handling
 ```python
 # Handling an exception

@@ -285,7 +285,7 @@ fruits[3] = "date"; // Add a new element at the end
 
 // Use length property to get or set the length of an array
 fruits.length; // 4
-numbers.length = 5; // Set the length of numbers to 5
+numbers.length = 5; // [1, 2, 3, <2 empty slots>]; slots are not explicit undefined values
 
 // Use push method to add one or more elements at the end of an array
 fruits.push("elderberry", "fig"); // ["apple", "berry", "cherry", "date", "elderberry", "fig"]
@@ -312,11 +312,15 @@ fruits.splice(2, 0, "banana", "blackberry"); // Add two elements at index 2
 fruits; // ["apple", "apricot", "banana", "blackberry", "date", "elderberry"]
 
 // Use sort method to sort the elements of an array
-numbers.sort(); // [1, 2, 3, undefined, undefined]
+numbers.sort(); // [1, 2, 3, <2 empty slots>]
+// Default sorting compares string representations, not numeric magnitudes.
+var scores = [2, 10, 1];
+scores.sort(); // [1, 10, 2]
+scores.sort((a, b) => a - b); // [1, 2, 10]
 fruits.sort(); // ["apple", "apricot", "banana", "blackberry", "date", "elderberry"]
 
 // Use reverse method to reverse the order of the elements of an array
-numbers.reverse(); // [undefined, undefined, 3, 2, 1]
+numbers.reverse(); // [<2 empty slots>, 3, 2, 1]
 fruits.reverse(); // ["elderberry", "date", "blackberry", "banana", "apricot", "apple"]
 
 // Create an object using object literal syntax

@@ -216,14 +216,28 @@ msg := <- ch //receive message
 
 ### Channels
 
-```go 
-ch := make(chan int) 
+```go
+package main
 
-ch <- 10 //send
-x := <- ch //receive
+import "fmt"
 
-close(ch) //close channel
+func main() {
+  ch := make(chan int)
+
+  go func() {
+    ch <- 10
+    close(ch) // The sender closes the channel after its final send.
+  }()
+
+  for value := range ch {
+    fmt.Println(value) // 10
+  }
+}
 ```
+
+An unbuffered send waits for a receiver. Sending and receiving sequentially in
+one goroutine would deadlock. The range finishes when the sender closes the
+channel; receivers should not close channels they do not own.
 
 - Typed conduits for communication between goroutines
 - Send/receive data with channel operators `<-` and `->`

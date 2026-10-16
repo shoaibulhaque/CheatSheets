@@ -13,11 +13,27 @@
 
 ## Languages
 
-- [<img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white">](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/Python-CheatSheet.md)
-- [<img src="https://img.shields.io/badge/-C%23-800080?style=for-the-badge&logo=c-sharp&logoColor=white">](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/C%23-CheatsSheet.md)
-- [<img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/C%2B%2B-Cheatsheet.md)
-- [<img src="https://img.shields.io/badge/-Go-00ADD8?style=for-the-badge&logo=go&logoColor=white">](https://github.com/shoaibulhaque/CheatSheets/blob/main/cheatsheets/Golang_cheatsheet.md)
+| Language | Reference |
+| --- | --- |
+| Python | [Syntax, functions, files, classes, networking and threads](cheatsheets/Python-CheatSheet.md) |
+| JavaScript | [Types, operators, arrays, built-ins, DOM and callbacks](cheatsheets/Javascript_cheat.md) |
+| Go | [Types, interfaces, goroutines, channels and testing](cheatsheets/Golang_cheatsheet.md) |
+| C++ | [C++ reference](cheatsheets/C%2B%2B-Cheatsheet.md) |
+| C# | [C# reference](cheatsheets/C%23-CheatsSheet.md) |
 
+## Using the examples
+
+Open a language reference above and choose the section you need. Short fragments
+illustrate individual concepts; complete programs include their imports and
+entry point. Run sections independently rather than concatenating every block.
+JavaScript DOM examples require a browser page with the referenced HTML elements.
+Python's NumPy, pandas and Matplotlib examples require those packages separately.
+
+## Contributing
+
+To correct or extend a reference, open a focused pull request explaining the
+problem, the expected result and how you checked the example. Test changed code
+with the relevant language runtime. Keep filenames stable so existing links work.
 
 ## License
 
